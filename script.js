@@ -27,7 +27,7 @@ _dayInput.addEventListener("input", e => {
         _dayError.textContent = ""
     }
 
-    if(value < 0 || value === 0){
+    if(value < 0 || value === 0 || String(e.target.value) == 'e'){
         _dayError.textContent = "This field is required"
         isValid = false
         return;
@@ -48,7 +48,7 @@ _monthInput.addEventListener("input", e => {
         _monthError.textContent = ""
     }
 
-    if(value < 0 || value === 0){
+    if(value < 0 || value === 0 || String(e.target.value) == 'e'){
         _monthError.textContent = "This field is required"
         isValid = false
         return;
@@ -70,7 +70,7 @@ _yearInput.addEventListener("input", e => {
         _yearError.textContent = ""
     }
 
-    if(value < 0 || value === 0){
+    if(value < 0 || value === 0 || String(e.target.value) == 'e'){
         _yearError.textContent = "This field is required"
         isValid = false
         return;
