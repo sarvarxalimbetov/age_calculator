@@ -1,0 +1,226 @@
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Off-white: hsl(0, 0%, 94%);
+    --Light-grey: hsl(0, 0%, 86%);
+    --Smokey-grey: hsl(0, 1%, 44%);
+    --Off-black: hsl(0, 0%, 8%);
+    --Purple: hsl(259, 100%, 65%);
+    --Light-red: hsl(0, 100%, 67%);
+}
+
+@font-face {
+    font-family: 'pop';
+    src: url('./assets/fonts/Poppins-Regular.ttf');
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'pop';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--Off-white);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.app_wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 450px;
+    background-color: var(--White);
+    border: none;
+    border-radius: 15px;
+    border-bottom-right-radius: 120px;
+    padding: 40px;
+}
+
+.app_form {
+    display: flex;
+    width: 100%;
+    padding: 10px 0;
+    gap: 20px;
+}
+
+.app_label {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--Smokey-grey);
+}
+
+.app_input {
+    width: 120px;
+    height: 50px;
+    margin-top: 10px;
+    padding: 10px;
+    outline: none;
+    border: 1px solid var(--Light-grey);
+    border-radius: 4px;
+}
+
+.app_input:focus {
+    border: 1px solid var(--Purple);
+}
+
+.app_line {
+    width: 100%;
+    height: 1px;
+    background-color: var(--Light-grey);
+    margin: 20px 0 30px;
+}
+
+.app_submitBtn {
+    position: absolute;
+    top: 145px;
+    right: 40px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--Purple);
+    transition: all .3s;
+}
+
+.app_submitBtn:hover {
+    background-color: black;
+}
+
+.output {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.output_text {
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.output_text span {
+    color: var(--Purple);
+}
+
+.error{
+    font-size: 10px;
+    margin-top: 10px;
+    color: var(--Light-red);
+}
+
+@media screen and (max-width: 426px) {
+    .app_wrapper {
+        width: 400px;
+    }
+
+    .app_form {
+        gap: 10px;
+    }
+
+    .app_label {
+        font-size: 10px;
+    }
+
+    .app_input {
+        width: 100px;
+        height: 40px;
+    }
+
+    .app_line{
+        margin: 30px 0 40px;
+    }
+
+    .app_submitBtn {
+        top: 150px;
+        left: 40%;
+        width: 50px;
+        height: 50px;
+    }
+
+    .app_submitBtn img {
+        width: 25px;
+        height: 25px;
+        object-fit: cover;
+    }
+
+    .error{
+        font-size: 8px;
+        margin-top: 5px;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .app_wrapper {
+        width: 350px;
+    }
+
+    .app_label {
+        font-size: 8px;
+    }
+
+    .app_input {
+        width: 80px;
+        height: 30px;
+        margin-top: 5px;
+    }
+
+    .app_submitBtn {
+        top: 125px;
+    }
+
+    .output_text{
+        font-size: 34px;
+    }
+
+    .error{
+        font-size: 6px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .app_wrapper {
+        width: 300px;
+        height: 350px;
+        padding: 20px;
+        border-bottom-right-radius: 100px;
+    }
+
+    .app_input {
+        width: 80px;
+        height: 30px;
+        margin-top: 5px;
+    }
+
+    .app_submitBtn {
+        top: 105px;
+    }
+
+    .output_text{
+        font-size: 30px;
+    }
+}
+
